@@ -1,2 +1,2 @@
-# python_practice_for_jobs
-These are the code for python practice. Most of them are exam questions for finding a job in Chinese Internet companies like Huawei.
+# 华为软件笔试题练习
+华为软件笔试分为三道编程题，分别满分100,200,300，难度依次递增。
