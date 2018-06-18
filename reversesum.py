@@ -1,3 +1,4 @@
+# 华为笔试真题
 # When the two inputs are integers between [1:7000],
 # first reverse each of them, then sum up
 
