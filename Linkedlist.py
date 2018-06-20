@@ -1,3 +1,5 @@
+# 题目来自剑指offer
+# 输入一个链表，从尾到头打印链表每个节点的值。
 # -*- coding:utf-8 -*-
 class ListNode:
     def __init__(self, x):
@@ -19,4 +21,3 @@ class Solution:
             head = head.next
         list_t2h.reverse()
         return list_t2h
-
