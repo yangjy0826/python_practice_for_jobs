@@ -71,3 +71,51 @@ else:
 
 
 ###############################################################解法2
+import sys
+import math
+import copy
+
+
+def combine(l, n):
+    answers = []
+    one = [0] * n
+
+    def next_c(li=0, ni=0):
+        if ni == n:
+            answers.append(copy.copy(one))
+            return
+        for lj in range(li, len(l)): # python2和python3一个用range，一个用xrange
+            one[ni] = l[lj]
+            next_c(lj + 1, ni + 1)
+    next_c()
+    return answers
+
+
+n = int(sys.stdin.readline().strip())  # read the 1st line
+index = []
+if n < 3:
+    print('Error')
+for i in range(n):
+    index.append(i)
+else:
+    x = []
+    y = []
+    for i in range(n):
+        x_new, y_new = map(int, sys.stdin.readline().strip().split(" "))
+        x.append(x_new)
+        y.append(y_new)
+    index = combine(index, 3)
+    count = 0
+    for i in range(len(index)):
+        p0 = index[i][0]
+        p1 = index[i][1]
+        p2 = index[i][2]
+        # a = math.sqrt(pow(x[p0] - x[p1], 2) + pow(y[p0] - y[p1], 2))  # 错误的判断三角形
+        # b = math.sqrt(pow(x[p0] - x[p2], 2) + pow(y[p0] - y[p2], 2))
+        # c = math.sqrt(pow(x[p1] - x[p2], 2) + pow(y[p1] - y[p2], 2))
+        # if a+b>c and abs(a-b)<c and a+c>b and abs(a-c)<b and b+c>a and abs(b-c)<a :
+        #     count += 1
+        if ((x[p0] - x[p1])*(y[p2] - y[p1])-(x[p2] - x[p1])*(y[p0] - y[p1])) != 0:  # 判断三角形
+            count += 1
+print(count)
+
