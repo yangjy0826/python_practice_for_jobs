@@ -34,27 +34,3 @@ else:
     count = int(count/6)
     print(count)
 
-# import copy
-#
-#
-#
-# def combine(l, n):
-#     answers = []
-#     one = [0] * n
-#
-#     def next_c(li=0, ni=0):
-#         if ni == n:
-#             answers.append(copy.copy(one))
-#             return
-#         for lj in range(li, len(l)): # python2 和python3一个用range，一个用xrange
-#             one[ni] = l[lj]
-#             next_c(lj + 1, ni + 1)
-#     next_c()
-#     return answers
-#
-#
-# print(combine([1, 2, 3, 4, 5], 3))
-
-
-# from itertools import combinations # 组合函数
-# print(list(combinations([1,2,3,4,5], 3)))
