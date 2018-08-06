@@ -1,3 +1,19 @@
+# 本题为2018年8月5日拼多多笔试题目
+
+# 第一题
+# 把给定的字符串（长度为4的倍数）转着圈的顺时针输出成一个正方形。中间的部分用空格填充。
+
+# 如输入：
+
+# abcdefghijklmnop
+# 会得到：
+
+# abcde
+# p   f
+# o   g
+# n   h
+# mlkji
+
 import sys
 
 # str = sys.stdin.readline().strip()
