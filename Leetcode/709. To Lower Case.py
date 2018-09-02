@@ -1,3 +1,20 @@
+# The problem is:
+# Implement function ToLowerCase() that has a string parameter str, and returns the same string in lowercase.
+
+# Example 1:
+
+# Input: "Hello"
+# Output: "hello"
+# Example 2:
+
+# Input: "here"
+# Output: "here"
+# Example 3:
+
+# Input: "LOVELY"
+# Output: "lovely"
+
+# My code beats 100% of others:
 class Solution:
     def toLowerCase(self, str):
         """
