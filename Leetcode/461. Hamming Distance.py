@@ -1,3 +1,4 @@
+# My code only beats 20% submissions:
 class Solution:
     def hammingDistance(self, x, y):
         """
@@ -23,6 +24,7 @@ class Solution:
                 hamming += 1
         return hamming
 
+# Here is a code beats 100% submissions:
 # class Solution(object):e
 #     def hammingDistance(self, x, y):
 #         """
@@ -31,6 +33,6 @@ class Solution:
 #         :rtype: int
 #         """
 #
-#         result = str(bin(x ^ y)[2:])
+#         result = str(bin(x ^ y)[2:])   # ^是Python中的异或运算。比如x = 1, y = 4 时，x^y = 5
 #
 #         return result.count("1")
