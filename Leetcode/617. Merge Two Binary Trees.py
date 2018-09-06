@@ -1,3 +1,5 @@
+# My code beats 90% of the submissions
+# 注意一下这个trick，已经return之后，函数后面的行就不会再运算了 比if……elif……else的模型（速度只打败了10%）快好多
 class Solution:
     def mergeTrees(self, t1, t2): ##recursion
         """
