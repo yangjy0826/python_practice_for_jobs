@@ -33,7 +33,10 @@ class Solution:
             A_new.append(odd[j])
         return(A_new)
 
-# Others' faster code:
+# Faster code given by the solution:
+# Read all the even integers and put them into places ans[0], ans[2], ans[4], and so on.
+# Then, read all the odd integers and put them into places ans[1], ans[3], ans[5], etc.
+
 # class Solution(object):
 #     def sortArrayByParityII(self, A):
 #         N = len(A)
