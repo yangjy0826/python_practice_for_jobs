@@ -56,3 +56,4 @@ class Solution:
 #         # ans[1::2] = (x for x in A if x % 2 == 1)
 #
 #         return ans
+
