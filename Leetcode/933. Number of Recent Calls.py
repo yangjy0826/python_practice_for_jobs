@@ -9,6 +9,8 @@
 # Input: inputs = ["RecentCounter","ping","ping","ping","ping"], inputs = [[],[1],[100],[3001],[3002]]
 # Output: [null,1,2,3,3]
 
+# The expected function only deals with one input. So we have to save the list of inputs in 'self'.
+
 
 # My code:
 class RecentCounter:
@@ -34,3 +36,14 @@ class RecentCounter:
 # Your RecentCounter object will be instantiated and called as such:
 # obj = RecentCounter()
 # param_1 = obj.ping(t)
+
+# However, my code is out of the time limitation, the solution code use a function 'deque' to solve the problem:
+# class RecentCounter(object):
+#     def __init__(self):
+#         self.q = collections.deque()
+#
+#     def ping(self, t):
+#         self.q.append(t)
+#         while self.q[0] < t-3000:
+#             self.q.popleft()
+#         return len(self.q)
