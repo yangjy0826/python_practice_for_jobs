@@ -7,8 +7,6 @@ class Node(object):
         self.val = val
         self.children = children
 """
-
-
 class Solution(object):
     def preorder(self, root):
         """
@@ -22,10 +20,30 @@ class Solution(object):
         while stack:
             root = stack.pop()
             output.append(root.val)
-            print(root.children[::-1])
-
             stack.extend(root.children[::-1])
+            # extend children的顺序是反过来的，因为堆栈是先进后出，我们为了保证pop的顺序而将其颠倒
         return output
-root={"$id":"1","children":[{"$id":"2","children":[{"$id":"5","children":[],"val":5},{"$id":"6","children":[],"val":6}],"val":3},{"$id":"3","children":[],"val":2},{"$id":"4","children":[],"val":4}],"val":1}
-Solution.preorder(root)
 # The 2nd solution:
+# """
+# # Definition for a Node.
+# class Node(object):
+#     def __init__(self, val, children):
+#         self.val = val
+#         self.children = children
+# """
+# class Solution(object):
+#     def preorder(self, root):
+#         """
+#         :type root: Node
+#         :rtype: List[int]
+#         """
+#         def dfs(root):
+#             if not root:
+#                 return
+#             res.append(root.val)
+#             for c in root.children:
+#                 dfs(c)
+#
+#         res = []
+#         dfs(root)
+#         return res​
